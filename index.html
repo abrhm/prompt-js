@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<script src="prompt.js"></script>
+	<script src="person.js"></script>
+	</head>
+
+	<body>
+	<button onclick="readData();">Start!</button>
+
+	<script>
+		function readData()
+		{
+			var personPrompt = new PersonPrompt();
+			var person = personPrompt.create();
+
+			var node = document.createElement("p");
+			node.innerHTML += "Name: " + person.name + "</br>";
+			node.innerHTML += "Age: " + person.age;
+
+			document.body.appendChild(node);
+		}
+	</script>
+	</body>
+</html>
