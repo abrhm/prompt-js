@@ -1,25 +1,10 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	<script src="prompt.js"></script>
-	<script src="person.js"></script>
+	<script type="text/javascript" data-main="person" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.3/require.min.js"></script>
 	</head>
 
 	<body>
-	<button onclick="readData();">Start!</button>
-
-	<script>
-		function readData()
-		{
-			var personPrompt = new PersonPrompt();
-			var person = personPrompt.create();
-
-			var node = document.createElement("p");
-			node.innerHTML += "Name: " + person.name + "</br>";
-			node.innerHTML += "Age: " + person.age;
-
-			document.body.appendChild(node);
-		}
-	</script>
+	<button id="button">Start!</button>
 	</body>
 </html>
